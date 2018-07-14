@@ -31,9 +31,9 @@ static const struct {
 };
 
 static void
-on_document_open (GObject        *obj,
+on_document_open (GObject        *obj   G_GNUC_UNUSED,
                   GeanyDocument  *doc,
-                  gpointer        dummy)
+                  gpointer        dummy G_GNUC_UNUSED)
 {
   /* FIXME: don't change filetype if the file was part of the session, because
    * then the user might have made a manual choice we shouldn't override. */
@@ -67,7 +67,7 @@ on_document_open (GObject        *obj,
 
 static gboolean
 init (GeanyPlugin *plugin,
-      gpointer     data)
+      gpointer     data G_GNUC_UNUSED)
 {
   plugin_signal_connect (plugin, NULL, "document-open", TRUE,
                          G_CALLBACK (on_document_open), NULL);
@@ -76,8 +76,8 @@ init (GeanyPlugin *plugin,
 }
 
 static void
-cleanup (GeanyPlugin *plugin,
-         gpointer     data)
+cleanup (GeanyPlugin *plugin  G_GNUC_UNUSED,
+         gpointer     data    G_GNUC_UNUSED)
 {
 }
 
