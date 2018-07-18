@@ -26,8 +26,8 @@ static const struct {
   const char       *pattern;  /**< Scintilla-style regex */
   GeanyFiletypeID   filetype; /**< Target filetype for this pattern */
 } G_mappings[] = {
-  { "^ *# *include",  GEANY_FILETYPES_OBJECTIVEC },
-  { "^ *# *import",   GEANY_FILETYPES_OBJECTIVEC },
+  { "^[ \\t]*#[ \\t]*include",  GEANY_FILETYPES_OBJECTIVEC },
+  { "^[ \\t]*#[ \\t]*import",   GEANY_FILETYPES_OBJECTIVEC },
 };
 
 static void
