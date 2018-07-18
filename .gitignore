@@ -3,5 +3,3 @@
 .deps/
 *.lo
 *.la
-
-/geany-plugin.mk
